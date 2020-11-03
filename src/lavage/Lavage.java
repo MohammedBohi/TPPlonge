@@ -13,7 +13,7 @@ public class Lavage {
 
 	public static void main(String[] args) {
 		// La ressource partagée
-		Pile pileAssiettes = new Pile();
+		PileDAssiettes pileAssiettes = new PileDAssiettes();
 		// Les threads qui se partagent la ressource
 		Laveur l = new Laveur(pileAssiettes);
 		Laveur l2 = new Laveur(pileAssiettes);

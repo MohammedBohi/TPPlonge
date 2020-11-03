@@ -1,9 +1,9 @@
 package lavage;
 
 class Laveur extends Thread {
-	private final Pile myStack;
+	private final PileDAssiettes myStack;
 
-	Laveur(Pile s) {
+	Laveur(PileDAssiettes s) {
 		myStack = s;
 	}
 

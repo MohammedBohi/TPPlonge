@@ -3,7 +3,7 @@ package lavage;
 import java.util.LinkedList;
 import java.util.List;
 
-class Pile {
+class PileDAssiettes {
 
 	private final static int MAX = 10;
 	private final List<Assiette> myList = new LinkedList<>();

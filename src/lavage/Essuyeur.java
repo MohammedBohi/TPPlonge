@@ -2,9 +2,9 @@ package lavage;
 
 class Essuyeur extends Thread {
 
-	private final Pile myStack;
+	private final PileDAssiettes myStack;
 
-	Essuyeur(Pile s) {
+	Essuyeur(PileDAssiettes s) {
 		myStack = s;
 	}
 
