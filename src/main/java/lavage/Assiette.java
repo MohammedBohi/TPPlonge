@@ -16,7 +16,7 @@ public class Assiette {
 
 	@Override
 	public String toString() {
-		return "Assiette{" + "numeroAssiette=" + numeroAssiette + '}';
+		return "Assiette n° " + numeroAssiette;
 	}
 
 }
