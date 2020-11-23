@@ -16,24 +16,24 @@ class PileDAssiettes {
 		return (myList.size() >= MAX);
 	}
 
-	synchronized void push(Assiette assiette) throws InterruptedException {
+	synchronized public void push(Assiette assiette) throws InterruptedException {
 		// Attendre que la pile ne soit pas pleine
 		while (isFull()) {
 			wait(); // Peut lever InterruptedException
 		}
-		assert (!isFull());
+		// assert (!isFull());
 		// Ajouter à la fin de la liste
 		myList.add(assiette);
 		System.out.printf("La pile contient %d assiettes%n", myList.size());
 		notifyAll(); // Notifier que la pile n'est plus vide
 	}
 
-	synchronized Assiette pop() throws InterruptedException {
+	synchronized public Assiette pop() throws InterruptedException {
 		// Attendre que la pile ne soit pas vide
 		while (isEmpty()) {
 			wait(); // Peut lever InterruptedException
 		}		// Dépiler
-		assert !isEmpty(); // On est sur que la pile n'est pas vide
+		// assert !isEmpty(); // On est sur que la pile n'est pas vide
 		Assiette result = myList.remove(myList.size() - 1);
 		System.out.printf("La pile contient %d assiettes%n", myList.size());
 		notifyAll(); // Notifier que la pile n'est plus pleine
